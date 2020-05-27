@@ -14,7 +14,6 @@ PV = "${IMAGE_VERSION}"
 PR = "r0"
 
 RDEPENDS_${PN} = "\
-    oe-alliance-enigma2 \
     oe-alliance-branding \
     ${@bb.utils.contains("MACHINE_FEATURES", "wol", "vuplus-coldboot vuplus-ethwol", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "wowl", "vuplus-wowl", "", d)} \
