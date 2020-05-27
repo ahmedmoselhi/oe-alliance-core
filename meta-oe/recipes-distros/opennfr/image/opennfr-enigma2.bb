@@ -11,18 +11,15 @@ PR = "r40"
 
 inherit packagegroup
 
-DEPENDS = "opennfr-feeds opennfr-3rdparty-plugins 3rd-party-feed-configs"
+DEPENDS = "opennfr-3rdparty-plugins 3rd-party-feed-configs lzo"
 
 RDEPENDS_${PN} = "\
-    enigma2-plugin-extensions-autotimer \
-    enigma2-plugin-extensions-epgsearch \
     enigma2-plugin-extensions-mediaplayer \
     enigma2-plugin-extensions-cutlisteditor \
     enigma2-plugin-extensions-menusort \
     enigma2-plugin-extensions-infopanel \
     enigma2-plugin-extensions-fileload \
     enigma2-plugin-extensions-nfr4xboot \
-    enigma2-plugin-extensions-imdb \
     enigma2-plugin-extensions-customsubservices \    
     \
     enigma2-plugin-systemplugins-fastscan \
@@ -31,12 +28,6 @@ RDEPENDS_${PN} = "\
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-themes enigma2-plugin-extensions-openwebif-terminal", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "enigma2-plugin-extensions-openwebif-webtv", "enigma2-plugin-extensions-openwebif-vxg", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "nextv-hbbtv-browser", " enigma2-plugin-extensions-hbbtv-nextv", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "osdanimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "webkithbbtv", "enigma2-plugin-extensions-webkithbbtv", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "chromiumos", "enigma2-plugin-extensions-chromium", "", d)} \ 
-    ${@bb.utils.contains("MACHINE_FEATURES", "quadpip", "enigma2-plugin-extensions-quadpip", "", d)} \
     \
     enigma2-plugin-opennfrskins-smokedefault-hd \
     enigma2-plugin-opennfrskins-utopia-hd \
