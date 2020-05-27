@@ -41,11 +41,6 @@ RRECOMMENDS_${PN} = " \
     glib-networking \
     glibc-gconv-utf-16 \
     gstreamer1.0-plugin-subsink \
-    ${GST_BASE_RDEPS} \
-    ${GST_GOOD_RDEPS} \
-    ${GST_BAD_RDEPS} \
-    ${GST_UGLY_RDEPS} \
-    ${GST_BAD_OPUS} \
     "
 
 PYTHON_RDEPS = " \
