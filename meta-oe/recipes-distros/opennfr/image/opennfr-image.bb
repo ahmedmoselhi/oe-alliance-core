@@ -14,6 +14,12 @@ IMAGE_INSTALL = " \
     autofs \
     wireless-tools \
     rt3070 \
+    mt7601u \
+    rt8188eu \
+    rtl8192cu \
+    early-configure \
+    kernel-params \
+    nfr4xmultiboot \
     opennfr-base \
     packagegroup-base-smbfs-client \
     packagegroup-base-smbfs-server \

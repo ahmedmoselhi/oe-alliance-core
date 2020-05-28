@@ -11,7 +11,7 @@ PR = "r40"
 
 inherit packagegroup
 
-DEPENDS = "opennfr-3rdparty-plugins 3rd-party-feed-configs lzo"
+DEPENDS = "opennfr-3rdparty-plugins lzo"
 
 RDEPENDS_${PN} = "\
     enigma2-plugin-extensions-mediaplayer \

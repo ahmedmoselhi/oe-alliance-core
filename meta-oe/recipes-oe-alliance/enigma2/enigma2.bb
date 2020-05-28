@@ -206,13 +206,14 @@ FILES_enigma2-fonts = "${datadir}/fonts"
 
 ALLOW_EMPTY_enigma2-plugin-font-wqy-microhei = "1"
 
+CXXFLAGS_append_sh4 += " -std=c++11 "
+
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \
     HOST_SYS=${HOST_SYS} \
     STAGING_INCDIR=${STAGING_INCDIR} \
     STAGING_LIBDIR=${STAGING_LIBDIR} \
     --with-boxtype=${MACHINE} \
-    --with-machinebuild="${MACHINEBUILD}" \
     --with-libsdl=no \
     --enable-dependency-tracking \
     --with-gstversion=1.0 \
