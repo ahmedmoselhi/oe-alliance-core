@@ -23,7 +23,7 @@ LIC_FILES_CHKSUM = "file://COPYING.GPLv2;md5=b234ee4d69f5fce4486a80fdaf4a4263 \
                     file://COPYING.LGPLv2.1;md5=bd7a443320af8c812e4c18d1b79df004 \
                     file://COPYING.LGPLv3;md5=e6a600fd5e1d9cbde2d983680233ad02"
 
-SRCREV = "61853f7503530ae11ed407a80463dc7ac2e7362d"
+SRCREV = "bf7ed52c25b4e9ed15a469e9119a0d4f7cfdd1b7"
 SRC_URI = "git://github.com/FFmpeg/FFmpeg.git;branch=release/4.2 \
            file://4_mips64_cpu_detection.patch \
            "
@@ -37,7 +37,7 @@ ARM_INSTRUCTION_SET_armv6 = "arm"
 # libpostproc was previously packaged from a separate recipe
 PROVIDES = "libav libpostproc"
 
-DEPENDS = "alsa-lib zlib libogg nasm-native"
+DEPENDS = "nasm-native"
 
 S = "${WORKDIR}/git"
 
@@ -60,6 +60,7 @@ PACKAGECONFIG[avresample] = "--enable-avresample,--disable-avresample"
 # features to support
 PACKAGECONFIG[alsa] = "--enable-alsa,--disable-alsa,alsa-lib"
 PACKAGECONFIG[bzlib] = "--enable-bzlib,--disable-bzlib,bzip2"
+PACKAGECONFIG[fdk-aac] = "--enable-libfdk-aac --enable-nonfree,--disable-libfdk-aac,fdk-aac"
 PACKAGECONFIG[gpl] = "--enable-gpl,--disable-gpl"
 PACKAGECONFIG[gsm] = "--enable-libgsm,--disable-libgsm,libgsm"
 PACKAGECONFIG[jack] = "--enable-indev=jack,--disable-indev=jack,jack"
@@ -75,6 +76,7 @@ PACKAGECONFIG[vaapi] = "--enable-vaapi,--disable-vaapi,libva"
 PACKAGECONFIG[vdpau] = "--enable-vdpau,--disable-vdpau,libvdpau"
 PACKAGECONFIG[vpx] = "--enable-libvpx,--disable-libvpx,libvpx"
 PACKAGECONFIG[x264] = "--enable-libx264,--disable-libx264,x264"
+PACKAGECONFIG[x265] = "--enable-libx265,--disable-libx265,x265"
 PACKAGECONFIG[xcb] = "--enable-libxcb,--disable-libxcb,libxcb"
 PACKAGECONFIG[xv] = "--enable-outdev=xv,--disable-outdev=xv,libxv"
 PACKAGECONFIG[zlib] = "--enable-zlib,--disable-zlib,zlib"
@@ -103,8 +105,8 @@ EXTRA_OECONF = " \
     --arch=${TARGET_ARCH} \
     --target-os="linux" \
     --enable-cross-compile \
-    --extra-cflags="${TARGET_CFLAGS} ${HOST_CC_ARCH}${TOOLCHAIN_OPTIONS}" \
-    --extra-ldflags="${TARGET_LDFLAGS}" \
+    --extra-cflags="${CFLAGS} ${HOST_CC_ARCH}${TOOLCHAIN_OPTIONS}" \
+    --extra-ldflags="${LDFLAGS}" \
     --sysroot="${STAGING_DIR_TARGET}" \
     --enable-hardcoded-tables \
     ${EXTRA_FFCONF} \
