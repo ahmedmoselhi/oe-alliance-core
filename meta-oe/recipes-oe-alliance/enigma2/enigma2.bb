@@ -5,6 +5,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=751419260aa954499f7abaabaa882bbe"
 LIC_FILES_CHKSUM_teamblue = "file://LICENSE;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 LIC_FILES_CHKSUM_openatv = "file://LICENSE;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 LIC_FILES_CHKSUM_beyonwiz = "file://LICENSE;md5=b234ee4d69f5fce4486a80fdaf4a4263"
+LIC_FILES_CHKSUM_openeight = "file://LICENSE;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 DEPENDS = " \
     freetype \
@@ -53,7 +54,9 @@ PYTHON_RDEPS = " \
     python-crypt \
     python-fcntl \
     python-lang \
+    python-mmap \
     python-netclient \
+    python-netifaces \
     python-netserver \
     python-pickle \
     python-re \
@@ -185,6 +188,10 @@ PV = "${IMAGE_VERSION}+git${SRCPV}"
 PKGV = "${IMAGE_VERSION}+git${GITPKGV}"
 
 SRC_URI = "${ENIGMA2_URI}"
+
+SRC_URI_append_sh4 = " \
+    ${@bb.utils.contains("DISTRO_NAME", "openspa", "file://sh4-define-DTV_ENUM_DELSYS.patch" , "", d)} \
+    "
 
 SRC_URI_append_vuduo = " \
     file://duo_VFD.patch \

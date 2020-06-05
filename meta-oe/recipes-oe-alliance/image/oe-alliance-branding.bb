@@ -19,9 +19,9 @@ BRANCH="master"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI="git://github.com/oe-alliance/branding-module.git;protocol=git;branch=${BRANCH}"
-SRC_URI_append_openatv=" \
-	file://openatv_mappings.patch \
-"
+#SRC_URI_append_openatv=" \
+#	file://openatv_mappings.patch \
+#"
 
 S = "${WORKDIR}/git"
 
@@ -169,7 +169,7 @@ do_configure_prepend() {
         elif [ "${MACHINE}" = "dm800sev2" ]; then
             DRIVERSDATE="20151201"
         elif [ "${MACHINE}" = "dm900" ]; then
-            DRIVERSDATE="20190830"
+            DRIVERSDATE="20200226"
         elif [ "${MACHINE}" = "dm920" ]; then
             DRIVERSDATE="20190830"
         else

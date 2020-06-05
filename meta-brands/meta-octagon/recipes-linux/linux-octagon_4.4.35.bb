@@ -7,7 +7,7 @@ SRCDATE = "20181224"
 
 inherit kernel machine_kernel_pr
 
-MACHINE_KERNEL_PR_append = "28"
+MACHINE_KERNEL_PR_append = "31"
 
 SRC_URI[md5sum] = "ad7eab17a5071a0d5f9ff44eb44e027d"
 SRC_URI[sha256sum] = "0654d5aa21c51eaea46f7203014afe60052ec0990a92b9e289e1ca8a2793907c"
@@ -28,11 +28,17 @@ SRC_URI += "http://source.mynonpublic.com/octagon/octagon-linux-${PV}-${SRCDATE}
     file://HauppaugeWinTV-dualHD.patch \
     file://dib7000-linux_4.4.179.patch \
     file://dvb-usb-linux_4.4.179.patch \
-    file://findkerneldevice.py \
+    file://initramfs-subdirboot.cpio.gz;unpack=0 \
+    file://findkerneldevice.sh \
     file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
     file://0003-dont-mark-register-as-const.patch \
     file://wifi-linux_4.4.183.patch \
     file://move-default-dialect-to-SMB3.patch \
+    file://fix-dvbcore.patch \
+    file://0005-xbox-one-tuner-4.4.patch \
+    file://0006-dvb-media-tda18250-support-for-new-silicon-tuner.patch \
+    file://0007-dvb-mn88472-staging.patch \
+    file://mn88472_reset_stream_ID_reg_if_no_PLP_given.patch \
 "
 
 SRC_URI_append_sf8008m += " \
@@ -53,16 +59,21 @@ FILES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} /$
 KERNEL_IMAGETYPE = "uImage"
 KERNEL_OUTPUT = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 
+kernel_do_configure_prepend() {
+	install -d ${B}/usr
+	install -m 0644 ${WORKDIR}/initramfs-subdirboot.cpio.gz ${B}/
+}
+
 kernel_do_install_append() {
 	install -d ${D}/${KERNEL_IMAGEDEST}
 	install -m 0755 ${KERNEL_OUTPUT} ${D}/${KERNEL_IMAGEDEST}
-	install -m 0755 ${WORKDIR}/findkerneldevice.py ${D}/${KERNEL_IMAGEDEST}
+	install -m 0755 ${WORKDIR}/findkerneldevice.sh ${D}${KERNEL_IMAGEDEST}
 }
 
 pkg_postinst_kernel-image () {
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
-            python /${KERNEL_IMAGEDEST}/findkerneldevice.py
+            /${KERNEL_IMAGEDEST}/./findkerneldevice.sh
             dd if=/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} of=/dev/kernel
         fi
     fi

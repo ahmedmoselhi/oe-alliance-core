@@ -7,12 +7,19 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit deploy
 
-SRCDATE = "20191225"
+SRCDATE = "20200601"
 PR = "${SRCDATE}"
 
 S = "${WORKDIR}/patitions"
 
-SRC_URI = "http://source.mynonpublic.com/octagon/${MACHINE}-partitions-${SRCDATE}.zip"
+SRC_URI = "http://source.mynonpublic.com/octagon/${MACHINE}-partitions-${SRCDATE}.zip \
+  file://flash-apploader \
+"
+
+inherit update-rc.d
+
+INITSCRIPT_NAME = "flash-apploader"
+INITSCRIPT_PARAMS = "start 90 S ."
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
@@ -22,9 +29,11 @@ do_install() {
     install -m 0644 ${S}/bootargs.bin ${D}/usr/share/bootargs.bin
     install -m 0644 ${S}/fastboot.bin ${D}/usr/share/fastboot.bin
     install -m 0644 ${S}/apploader.bin ${D}/usr/share/apploader.bin
+    install -m 0755 -d ${D}${sysconfdir}/init.d
+    install -m 0755 ${WORKDIR}/flash-apploader ${D}${sysconfdir}/init.d/flash-apploader
 }
 
-FILES_${PN} = "/usr/share"
+FILES_${PN} = "/usr/share ${sysconfdir}"
 
 do_deploy() {
     install -d ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions
@@ -41,7 +50,7 @@ do_deploy() {
 
 addtask deploy before do_build after do_install
 
-SRC_URI[md5sum] = "f0025e0403da5bb60d0519c8c9604c0d"
-SRC_URI[sha256sum] = "3ca4af54e9b258cf946bc0532dfb25d2be784bc72815035f61ca6fadf0590521"
+SRC_URI[md5sum] = "6eb463266bd9d8067914800765c26fc5"
+SRC_URI[sha256sum] = "b7c1c87618f0a769c0b6e71e4c0b46fbd854aab0721e22aee240b0b5559ec87a"
 
 INSANE_SKIP_${PN} += "already-stripped"

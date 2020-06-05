@@ -16,7 +16,7 @@ RDEPENDS_${PN}-dev += "bash python3-core"
 inherit gitpkgv
 
 SRCREV = "${AUTOREV}"
-PV = "1.49-DEV+git${SRCPV}"
+PV = "1.51-DEV+git${SRCPV}"
 
 GO_IMPORT = "github.com/rclone/rclone"
 

@@ -33,6 +33,7 @@ ${@bb.utils.contains('MACHINEBUILD', 'jdhdduo', 'HD DUO' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'turing', 'TURING' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivatwin', 'ARIVA ATV TT' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivacombo', 'ARIVA ATV COMBO' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'vipertwin', 'Viper Twin E2' , '', d)}\
 "
 
 MACHINE_BRAND = "\
@@ -65,6 +66,7 @@ ${@bb.utils.contains('MACHINEBUILD', 'jdhdduo', 'HD DUO' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'turing', 'Atto.TV' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivatwin', 'Ferguson' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivacombo', 'Ferguson' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'vipertwin', 'AMIKO' , '', d)}\
 "
 
 MTD_KERNEL = "\
@@ -97,6 +99,7 @@ ${@bb.utils.contains('MACHINEBUILD', 'jdhdduo', 'mtd8' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'turing', 'mtd8' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivatwin', 'mmcblk0p10' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivacombo', 'mmcblk0p10' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'vipertwin', 'mtd8' , '', d)}\
 "
 
 MTD_ROOTFS = "\
@@ -122,13 +125,14 @@ ${@bb.utils.contains('MACHINEBUILD', 'iziboxx3', 'mtd11' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'axashistwin', 'mtd9' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'axashisc4k', 'mmcblk0p10' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'protek4kx1', 'mmcblk0p10' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'anadolprohd5', 'mtd11' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'spycatminiv2', 'mtd11' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'iziboxecohd', 'mtd11' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'jdhdduo', 'mtd11' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'turing', 'mtd11' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'anadolprohd5', 'mtd9' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'spycatminiv2', 'mtd9' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'iziboxecohd', 'mtd9' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'jdhdduo', 'mtd9' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'turing', 'mtd9' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivatwin', 'mmcblk0p13' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivacombo', 'mmcblk0p13' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'vipertwin', 'mtd9' , '', d)}\
 "
 
 SDCARDIMG = "\
@@ -161,6 +165,7 @@ ${@bb.utils.contains('MACHINEBUILD', 'jdhdduo', 'no' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'turing', 'no' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivatwin', 'no' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivacombo', 'no' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'vipertwin', 'no' , '', d)}\
 "
 
 IMAGEDIR = "\
@@ -186,13 +191,14 @@ ${@bb.utils.contains('MACHINEBUILD', 'iziboxx3', 'izibox/x3' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'axashistwin', 'axas/axashistwin' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'axashisc4k', 'axas/axasc4k' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'protek4kx1', 'e2/update' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'anadolprohd5', 'anadol/prohd5' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'spycatminiv2', 'spycat/miniv2' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'iziboxecohd', 'e2/update' , '', d)}\
-${@bb.utils.contains('MACHINEBUILD', 'jdhdduo', 'jd/duohd' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'anadolprohd5', 'dinobot/${MACHINE}' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'spycatminiv2', 'dinobot/${MACHINE}' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'iziboxecohd', 'dinobot/${MACHINE}' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'jdhdduo', 'dinobot/${MACHINE}' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'turing', 'atto/turing' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivatwin', 'e2/update' , '', d)}\
 ${@bb.utils.contains('MACHINEBUILD', 'arivacombo', 'e2/update' , '', d)}\
+${@bb.utils.contains('MACHINEBUILD', 'vipertwin', 'dinobot/${MACHINE}' , '', d)}\
 "
 
 KERNEL_MODULE_AUTOLOAD += "xhci-plat-hcd"
