@@ -25,6 +25,9 @@ RDEPENDS_${PN} = "\
     python-service-identity \
     python-requests \
     rtmpdump \
+    exteplayer3 \
+    gstplayer \
+    ffmpeg \
     zip \
     ${@bb.utils.contains("TUNE_FEATURES", "armv", "glibc-compat", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "dreamboxv1", "", "ofgwrite", d)} \
