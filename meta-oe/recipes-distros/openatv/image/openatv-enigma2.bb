@@ -21,10 +21,9 @@ RRECOMMENDS_${PN} = " \
     enigma2-plugin-drivers-usbserial \
     enigma2-plugin-extensions-autotimer \
     enigma2-plugin-extensions-cutlisteditor \
-    enigma2-plugin-extensions-dvdplayer \
     enigma2-plugin-extensions-epgsearch \
-    enigma2-plugin-extensions-filecommander \
     enigma2-plugin-extensions-imdb \
+    enigma2-plugin-systemplugins-serviceapp \
     enigma2-plugin-extensions-openwebif-themes \
     enigma2-plugin-extensions-openwebif-vxg \
     ", d)} \
@@ -36,7 +35,6 @@ RRECOMMENDS_${PN} = " \
     ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
     enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-hotplug \
-    enigma2-plugin-systemplugins-icetv \
     enigma2-plugin-extensions-mediaplayer \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-terminal", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-enhancedmoviecenter", d)} \
