@@ -26,6 +26,9 @@ DEPENDS = " \
 RDEPENDS_${PN} = " \
     alsa-conf \
     enigma2-fonts \
+    enigma2-locale-en \
+    enigma2-locale-ar \
+    enigma2-locale-ru \
     ethtool \
     glibc-gconv-iso8859-15 \
     glibc-gconv-cp1250 \

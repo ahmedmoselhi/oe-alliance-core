@@ -24,6 +24,9 @@ IMAGE_INSTALL = " \
     packagegroup-base-smbfs-client \
     packagegroup-base-smbfs-server \
     packagegroup-base-nfs \ 
+    enigma2-locale-en \
+    enigma2-locale-ar \
+    enigma2-locale-ru \
 "
 export IMAGE_BASENAME = "opennfr-image"
 IMAGE_LINGUAS = ""
