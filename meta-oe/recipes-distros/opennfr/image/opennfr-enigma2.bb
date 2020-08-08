@@ -20,11 +20,16 @@ RDEPENDS_${PN} = "\
     enigma2-plugin-extensions-infopanel \
     enigma2-plugin-extensions-fileload \
     enigma2-plugin-extensions-nfr4xboot \
-    enigma2-plugin-extensions-customsubservices \    
+    enigma2-plugin-extensions-customsubservices \  
+    enigma2-plugin-systemplugins-networkbrowser \
+    enigma2-plugin-systemplugins-networkwizard \
     \
     enigma2-plugin-systemplugins-fastscan \
+    enigma2-plugin-systemplugins-hdmicec \    
     enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-hotplug \    
+    enigma2-plugin-extensions-mediascanner \
+    enigma2-plugin-extensions-pictureplayer \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-themes enigma2-plugin-extensions-openwebif-terminal", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "enigma2-plugin-extensions-openwebif-webtv", "enigma2-plugin-extensions-openwebif-vxg", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
@@ -32,7 +37,13 @@ RDEPENDS_${PN} = "\
     enigma2-plugin-opennfrskins-smokedefault-hd \
     enigma2-plugin-opennfrskins-utopia-hd \
     opennfr-base-files \
-	nfr4xmultiboot \
+    nfr4xmultiboot \
+    tuxbox-links \
+    tuxbox-common \
+    mtd-utils \
+    aio-grab \
+    procps \
+    parted \    
     \
     ${@bb.utils.contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
 "
