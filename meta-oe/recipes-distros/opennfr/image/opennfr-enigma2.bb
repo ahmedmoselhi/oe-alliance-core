@@ -21,8 +21,8 @@ RDEPENDS_${PN} = "\
     enigma2-plugin-extensions-fileload \
     enigma2-plugin-extensions-nfr4xboot \
     enigma2-plugin-extensions-customsubservices \  
-    enigma2-plugin-systemplugins-networkbrowser \
     enigma2-plugin-systemplugins-networkwizard \
+    enigma2-plugin-systemplugins-wirelesslan \
     \
     enigma2-plugin-systemplugins-fastscan \
     enigma2-plugin-systemplugins-hdmicec \    

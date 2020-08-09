@@ -12,6 +12,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 IMAGE_INSTALL = " \
     autofs \
+    unjffs2 \
     wireless-tools \
     rt3070 \
     mt7601u \
