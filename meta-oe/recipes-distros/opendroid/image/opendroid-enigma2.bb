@@ -17,10 +17,9 @@ RRECOMMENDS_${PN} = " \
     opendroid-version-info \
     enigma2-skindefault \
     enigma2-plugin-skins-multibox-fhd-4opd \
-    enigma2-plugin-skins-ultimate-hd-4opd \
     enigma2-plugin-skins-opd-blue-line \
+    enigma2-plugin-skins-odreamy \
     enigma2-plugin-extensions-atilehd \
-    enigma2-plugin-extensions-ultimate \
     enigma2-plugin-extensions-autotimer \
     enigma2-plugin-systemplugins-wirelesslan \
     enigma2-plugin-extensions-weatherplugin-opd \
@@ -35,7 +34,8 @@ RRECOMMENDS_${PN} = " \
     ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
     enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-hotplug \
-    enigma2-plugin-systemplugins-hdmicec \    
+    enigma2-plugin-systemplugins-hdmicec \
+    enigma2-plugin-systemplugins-satfinder \    
     enigma2-plugin-extensions-mediaplayer \
     enigma2-plugin-extensions-pictureplayer \
     enigma2-plugin-extensions-mediascanner \
