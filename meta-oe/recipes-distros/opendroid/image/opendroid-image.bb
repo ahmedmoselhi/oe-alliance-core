@@ -30,6 +30,9 @@ IMAGE_INSTALL = "opendroid-base \
     rtl8192cu \
     early-configure \
     kernel-params \
+    enigma2-plugin-softcams-oscam-emu \    
+    enigma2-plugin-softcams-wicardd \    
+    enigma2-plugin-softcams-ncam \        
     "
 export IMAGE_BASENAME = "opendroid-image"
 IMAGE_LINGUAS = ""
