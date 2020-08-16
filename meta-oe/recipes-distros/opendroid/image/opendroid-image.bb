@@ -21,9 +21,16 @@ IMAGE_INSTALL = "opendroid-base \
     enigma2-locale-en \
     enigma2-locale-ar \
     enigma2-locale-ru \
+    autofs \
+    unjffs2 \
     wireless-tools \
+    rt3070 \
+    mt7601u \
+    rt8188eu \
+    rtl8192cu \
+    early-configure \
+    kernel-params \
     "
-
 export IMAGE_BASENAME = "opendroid-image"
 IMAGE_LINGUAS = ""
 
