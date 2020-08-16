@@ -11,7 +11,7 @@ PR = "r10"
 
 inherit packagegroup
 
-DEPENDS = "opendroid-feeds"
+DEPENDS = "lzo"
 
 RRECOMMENDS_${PN} = " \
     opendroid-version-info \
@@ -21,8 +21,8 @@ RRECOMMENDS_${PN} = " \
     enigma2-plugin-skins-opd-blue-line \
     enigma2-plugin-extensions-atilehd \
     enigma2-plugin-extensions-ultimate \
-    enigma2-plugin-extensions-opdboot \
     enigma2-plugin-extensions-autotimer \
+    enigma2-plugin-systemplugins-wirelesslan \
     enigma2-plugin-extensions-weatherplugin-opd \
     enigma2-plugin-extensions-gioppygio \
     enigma2-plugin-extensions-epgsearch \
@@ -31,11 +31,20 @@ RRECOMMENDS_${PN} = " \
     enigma2-plugin-extensions-cutlisteditor \
     enigma2-plugin-extensions-volume-adjust \
     enigma2-plugin-systemplugins-videotune \
+    enigma2-plugin-systemplugins-networkwizard \
     ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
     enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-hotplug \
+    enigma2-plugin-systemplugins-hdmicec \    
     enigma2-plugin-extensions-mediaplayer \
-    ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-enhancedmoviecenter", d)} \
+    enigma2-plugin-extensions-pictureplayer \
+    enigma2-plugin-extensions-mediascanner \
+    tuxbox-links \
+    tuxbox-common \
+    mtd-utils \
+    aio-grab \
+    procps \
+    parted \    
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-themes enigma2-plugin-extensions-openwebif-terminal", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "enigma2-plugin-extensions-openwebif-webtv", "enigma2-plugin-extensions-openwebif-vxg", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "dreamboxv1", "enigma2-plugin-extensions-dflash mtd-utils-jffs2", "", d)} \

@@ -18,6 +18,10 @@ IMAGE_INSTALL = "opendroid-base \
     packagegroup-base-smbfs-server \
     packagegroup-base-nfs \
     ", d)} \
+    enigma2-locale-en \
+    enigma2-locale-ar \
+    enigma2-locale-ru \
+    wireless-tools \
     "
 
 export IMAGE_BASENAME = "opendroid-image"

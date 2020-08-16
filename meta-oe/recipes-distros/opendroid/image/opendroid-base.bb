@@ -16,9 +16,7 @@ RDEPENDS_${PN} = "\
     ca-certificates \
     oe-alliance-base \
     opendroid-enigma2 \
-    opdmultiboot \
     opendroid-bootlogo \
-    opdboot-files \
     opendroid-spinner \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "ntfs-3g ", d)} \
     hddtemp \
