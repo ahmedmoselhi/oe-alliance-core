@@ -12,6 +12,7 @@ PR = "r8"
 inherit packagegroup
 
 RRECOMMENDS_${PN} = "\
+    softcams-enigma2-meta \
     oe-alliance-skins \
     enigma2-skins \
     enigma2-display-skins \

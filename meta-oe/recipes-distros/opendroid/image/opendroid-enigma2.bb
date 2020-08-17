@@ -11,7 +11,7 @@ PR = "r10"
 
 inherit packagegroup
 
-DEPENDS = "lzo"
+DEPENDS = "opendroid-feeds lzo"
 
 RRECOMMENDS_${PN} = " \
     opendroid-version-info \
@@ -45,6 +45,8 @@ RRECOMMENDS_${PN} = " \
     aio-grab \
     procps \
     parted \    
+    enigma2-plugin-softcams-oscam-emu \
+    enigma2-plugin-softcams-ncam \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-themes enigma2-plugin-extensions-openwebif-terminal", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "enigma2-plugin-extensions-openwebif-webtv", "enigma2-plugin-extensions-openwebif-vxg", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "dreamboxv1", "enigma2-plugin-extensions-dflash mtd-utils-jffs2", "", d)} \
