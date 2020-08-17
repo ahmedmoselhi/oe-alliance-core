@@ -15,7 +15,6 @@ FILES_${PN} = "${bindir} ${sysconfdir}"
 # no docs, locales etc.
 PACKAGES = "${PN}"
 
-RDEPENDS_${PN} += "softcam-support"
 INSANE_SKIP_${PN} += "already-stripped"
 
 CAMLINK = "$D${sysconfdir}/init.d/softcam"
