@@ -12,7 +12,26 @@ PR_NUM = "${@bb.utils.contains("DISTRO_TYPE", "release", "${BUILD_VERSION}.000",
 PV = "${IMAGE_VERSION}"
 PR = "r${PR_NUM}"
 
-IMAGE_INSTALL = "openvix-base"
+IMAGE_INSTALL = "openvix-base \
+    ${@bb.utils.contains("MACHINE_FEATURES", "singlecore", "", \
+    " \
+    packagegroup-base-smbfs-client \
+    packagegroup-base-smbfs-server \
+    packagegroup-base-nfs \
+    ", d)} \
+    enigma2-locale-en \
+    enigma2-locale-ar \
+    enigma2-locale-ru \
+    autofs \
+    unjffs2 \
+    wireless-tools \
+    rt3070 \
+    mt7601u \
+    rt8188eu \
+    rtl8192cu \
+    early-configure \
+    kernel-params \
+    "
 
 export IMAGE_BASENAME = "openvix-image"
 IMAGE_LINGUAS = ""
