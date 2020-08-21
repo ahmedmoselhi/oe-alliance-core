@@ -14,10 +14,15 @@ PR = "r4"
 inherit packagegroup
 
 DEPENDS = "\
+    enigma2-plugin-systemplugins-serviceapp \
     enigma2-plugin-extensions-blurayplayer \
     enigma2-skins-openvix \
     enigma2-plugin-skins-vix-turquoise-hd \
     oe-alliance-skins \
+    enigma2-oe-alliance-plugins \
+    enigma2-3rdparty-plugins \
+    enigma2-plugins \
+    enigma2-pliplugins \
     openvix-bootlogos-meta \
     ${@bb.utils.contains("MACHINE_FEATURES", "nolcd", "", "enigma2-display-skins", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "skins1080", "hd-skins-meta", "", d)} \

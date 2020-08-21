@@ -34,7 +34,6 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-skins-openvix-youvix-blue \
     enigma2-plugin-systemplugins-xmlupdate \
     enigma2-plugin-systemplugins-wirelesslan \
-    enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-hotplug \
     enigma2-plugin-systemplugins-hdmicec \
     enigma2-plugin-systemplugins-satfinder \
@@ -50,6 +49,9 @@ RRECOMMENDS_${PN} = "\
     parted \    
     enigma2-plugin-softcams-oscam-emu-openvix \
     enigma2-plugin-softcams-ncam-openvix \
+    ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-themes enigma2-plugin-extensions-openwebif-terminal", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "enigma2-plugin-extensions-openwebif-webtv", "enigma2-plugin-extensions-openwebif-vxg", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "osdanimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
     "

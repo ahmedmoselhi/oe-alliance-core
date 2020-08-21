@@ -27,7 +27,7 @@ SRC_URI += " \
 
 CONFFILES = "${sysconfdir}/tuxbox/config/ncam/ncam.conf ${sysconfdir}/tuxbox/config/ncam/ncam.server ${sysconfdir}/tuxbox/config/ncam/ncam.srvid ${sysconfdir}/tuxbox/config/ncam/ncam.user ${sysconfdir}/tuxbox/config/ncam/ncam.provid"
 
-FILES_${PN} = "${bindir}/ncam ${sysconfdir}/tuxbox/config/ncam/* ${sysconfdir}/init.d/softcam.ncam"
+FILES_${PN} = "/usr/softcams/ncam ${sysconfdir}/tuxbox/config/*"
 
 EXTRA_OECMAKE += "\
 	-DOSCAM_SYSTEM_NAME=Tuxbox \
