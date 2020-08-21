@@ -37,7 +37,8 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-hotplug \
     enigma2-plugin-systemplugins-hdmicec \
-    enigma2-plugin-systemplugins-satfinder \    
+    enigma2-plugin-systemplugins-satfinder \
+    enigma2-plugin-systemplugins-osdpositionsetup \    
     enigma2-plugin-extensions-mediaplayer \
     enigma2-plugin-extensions-pictureplayer \
     enigma2-plugin-extensions-mediascanner \
@@ -47,8 +48,8 @@ RRECOMMENDS_${PN} = "\
     aio-grab \
     procps \
     parted \    
-    enigma2-plugin-softcams-oscam-emu \
-    enigma2-plugin-softcams-ncam \
+    enigma2-plugin-softcams-oscam-emu-openvix \
+    enigma2-plugin-softcams-ncam-openvix \
     ${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "osdanimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
     "
