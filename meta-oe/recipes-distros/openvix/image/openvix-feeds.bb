@@ -14,6 +14,10 @@ PR = "r4"
 inherit packagegroup
 
 DEPENDS = "\
+    astra-sm \
+    enigma2-plugin-extensions-dlnabrowser \
+    enigma2-plugin-extensions-dlnaserver \
+    minidlna \
     enigma2-plugin-systemplugins-serviceapp \
     enigma2-plugin-extensions-blurayplayer \
     enigma2-skins-openvix \
@@ -27,4 +31,5 @@ DEPENDS = "\
     ${@bb.utils.contains("MACHINE_FEATURES", "nolcd", "", "enigma2-display-skins", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "skins1080", "hd-skins-meta", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "quadpip", "enigma2-plugin-systemplugins-quadpip", "", d)} \
+    libtorrent boost \
     "
