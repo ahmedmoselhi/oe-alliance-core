@@ -28,15 +28,23 @@ RRECOMMENDS_${PN} = " \
     enigma2-plugin-extensions-epgimport \
     enigma2-plugin-extensions-epgrefresh \
     enigma2-plugin-extensions-epgsearch \
-    enigma2-plugin-extensions-imdb \
     enigma2-plugin-extensions-mediaplayer \
     enigma2-plugin-extensions-socketmmi \
     enigma2-plugin-systemplugins-crossepg \
+    enigma2-plugin-systemplugins-wirelesslan \
     enigma2-plugin-systemplugins-hotplug \
     ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "omb", "enigma2-plugin-extensions-openmultiboot", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "omb", "openmultiboot", "", d)} \
     ${@bb.utils.contains("TARGET_ARCH", "arm", "glibc-compat", "", d)} \
+    tuxbox-links \
+    tuxbox-common \
+    mtd-utils \
+    aio-grab \
+    procps \
+    parted \    
+    enigma2-plugin-softcams-oscam-emu-obh \
+    enigma2-plugin-softcams-ncam-obh \
     "
 

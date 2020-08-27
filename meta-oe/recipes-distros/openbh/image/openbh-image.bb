@@ -19,6 +19,21 @@ IMAGE_INSTALL = "openbh-base \
     packagegroup-base-nfs \
     dvb-usb-drivers-meta \
     ", d)} \
+    enigma2-plugin-extensions-openmultiboot \
+    openmultiboot \    
+    enigma2-locale-en \
+    enigma2-locale-ar \
+    enigma2-locale-ru \
+    autofs \
+    unjffs2 \
+    wireless-tools \
+    rt3070 \
+    mt7601u \
+    rt8188eu \
+    rtl8192cu \
+    early-configure \
+    kernel-params \
+    oe-alliance-branding \
     "
 
 export IMAGE_BASENAME = "openbh-image"
@@ -57,3 +72,11 @@ do_package_remove_unused_ipk () {
     done
 }
 # addtask package_remove_unused_ipk before do_rootfs
+
+python do_package_index() {
+    from oe.rootfs import generate_index_files
+    generate_index_files(d)
+}
+
+addtask do_package_index after do_rootfs before do_image_complete
+

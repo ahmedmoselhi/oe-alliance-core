@@ -12,7 +12,7 @@ PKGV = "1.0+git${GITPKGV}"
 PR = "r0"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-SRC_URI = "git://github.com/oe-alliance/openmultibootmanager.git;protocol=git"
+SRC_URI = "git://github.com/ahmedmoselhi/openmultibootmanager.git;protocol=git"
 S = "${WORKDIR}/git"
 
 inherit autotools-brokensep

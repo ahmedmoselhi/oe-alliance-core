@@ -36,6 +36,7 @@ RDEPENDS_${PN} = "\
     openvpn \
     python-imaging \
     python-service-identity \
+    python-wifi \
     rtmpdump \
     ${@bb.utils.contains("TUNE_FEATURES", "armv", "glibc-compat", "", d)} \
     "

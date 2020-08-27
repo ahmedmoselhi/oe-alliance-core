@@ -17,14 +17,21 @@ RRECOMMENDS_${PN} = "\
     cdfs \
     curlftpfs \
     enigma2-display-skins \
-    enigma2-pliplugins \
+    astra-sm \
+    enigma2-plugin-extensions-dlnabrowser \
+    enigma2-plugin-extensions-dlnaserver \
+    minidlna \
+    enigma2-plugin-systemplugins-serviceapp \
     enigma2-plugin-extensions-blurayplayer \
     enigma2-plugin-extensions-epgimport \
-    enigma2-plugin-extensions-enhancedmoviecenter \
     enigma2-plugin-systemplugins-crossepg \
     enigma2-skins \
     enigma2-skins-openvix \
     oe-alliance-skins \
+    enigma2-oe-alliance-plugins \
+    enigma2-3rdparty-plugins \
+    enigma2-plugins \
+    enigma2-pliplugins \
     openssl-old \
     ${@bb.utils.contains("MACHINE_FEATURES", "skins1080", "hd-skins-meta", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "quadpip", "enigma2-plugin-systemplugins-quadpip", "", d)} \
