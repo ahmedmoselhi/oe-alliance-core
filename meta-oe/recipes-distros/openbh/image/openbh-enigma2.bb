@@ -32,8 +32,14 @@ RRECOMMENDS_${PN} = " \
     enigma2-plugin-extensions-socketmmi \
     enigma2-plugin-systemplugins-crossepg \
     enigma2-plugin-systemplugins-wirelesslan \
+    enigma2-plugin-systemplugins-networkbrowser \
+    enigma2-plugin-systemplugins-networkwizard \
     enigma2-plugin-systemplugins-hotplug \
+    enigma2-plugin-extensions-openwebif \
+    enigma2-plugin-systemplugins-satfinder \
     ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-themes enigma2-plugin-extensions-openwebif-terminal", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "enigma2-plugin-extensions-openwebif-webtv", "enigma2-plugin-extensions-openwebif-vxg", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "omb", "enigma2-plugin-extensions-openmultiboot", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "omb", "openmultiboot", "", d)} \
