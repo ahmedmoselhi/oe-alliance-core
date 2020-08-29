@@ -60,9 +60,6 @@ DEPENDS = "\
     usbmodeswitch-data \
     usbutils \
     satipclient \
-    bluez-conf \
-    bluez-hidd \
-    bluez-alsa \
     ${@bb.utils.contains('MACHINE_FEATURES', 'legacykernel', '' , 'hostapd bridge-utils', d)} \
     wvdial wvstreams \
     "
