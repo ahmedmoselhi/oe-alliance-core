@@ -49,5 +49,4 @@ RRECOMMENDS_${PN} = "\
 	\
 	${@bb.utils.contains("MACHINE_FEATURES", "skins1080", "hd-skins-meta", "", d)} \
 	\
-	libav \
 "

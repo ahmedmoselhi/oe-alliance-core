@@ -8,6 +8,8 @@ require conf/license/license-gplv2.inc
 
 PR = "r7"
 
+DEPENDS = "zlib"
+
 SRC_URI="file://egamiemud.tar.gz"
 
 S = "${WORKDIR}/egamiemud"
