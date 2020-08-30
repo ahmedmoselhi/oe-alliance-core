@@ -52,9 +52,9 @@ do_install_append() {
     if [ "${MACHINEBUILD}" = "sf4008" -o "${MACHINEBUILD}" = "sf5008" ]; then
         printf "/dev/mmcblk0p5\t\tnone\t\tswap\t\tsw\t\t\t\t\t0  0\n" >> ${D}${sysconfdir}/fstab
     fi
-    if [ "${DISTRO}" = "egami" ]; then
-        printf "/dev/sda1\t\t/media/hdd\tauto\t\tdefaults\t\t\t\t0  0\n" >> ${D}${sysconfdir}/fstab
-    fi
+#    if [ "${DISTRO}" = "egami" ]; then
+#        printf "/dev/sda1\t\t/media/hdd\tauto\t\tdefaults\t\t\t\t0  0\n" >> ${D}${sysconfdir}/fstab
+#    fi
 }
 
 # For Classic Dreambox Inject the /boot partition into /etc/fstab. At image creation time,

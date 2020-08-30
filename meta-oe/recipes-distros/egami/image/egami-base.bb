@@ -19,21 +19,24 @@ RDEPENDS_${PN} = "\
 	egami-version-info \
 	egami-base-files \
 	\
-	ntfs-3g \
-	dosfstools \
+        ca-certificates \  
+        curl \  
+        dvbsnoop \
+        hddtemp \
+        inadyn-mt \
+        libcrypto-compat-0.9.7 \
+        mc \
+        ntfs-3g \
+        openvpn \
+        python-imaging \
+        python-service-identity \
+        python-wifi \
+        rtmpdump \
 "
 
 RRECOMMENDS_${PN} = "\
 	streamripper \
-	hddtemp \
 	hdparm \
-	dvbsnoop \
 	minidlna \
 	djmount \
-	python-imaging python-compression \
-	kernel-module-ftdi-sio \
-	kernel-module-pl2303 \
-	${@bb.utils.contains("MACHINE_FEATURES", "boxmodel", "boxmodel", "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "dreambox", "", "ofgwrite", d)} \
-	${@bb.utils.contains("TUNE_FEATURES", "armv7a", "glibc-compat", "", d)} \
 "

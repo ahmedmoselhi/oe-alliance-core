@@ -11,10 +11,15 @@ PR = "r4"
 
 inherit packagegroup
 
+RCONFLICTS_${PN} = "enigma2-plugin-extensions-permanenttimeshift enigma2-plugin-systemplugins-skinselector"
+RREPLACES_${PN} = "enigma2-plugin-extensions-permanenttimeshift enigma2-plugin-systemplugins-skinselector"
+
+RDEPENDS_${PN} = "\
+    enigma2-skindefault \
+    "
 DEPENDS = "enigma2-pliplugins egami-feeds"
 
 RRECOMMENDS_${PN} = "\
-    enigma2-skindefault \
     enigma2-plugin-skins-egmega32 \
     enigma2-plugin-skins-odreamyfhd \
     \
@@ -37,14 +42,11 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-extensions-egaminews \
     enigma2-plugin-extensions-egamiclearmem \
     enigma2-plugin-extensions-epgimport \
-    ${@bb.utils.contains("MACHINE_BRAND", "WeTeK", "", "enigma2-plugin-extensions-egamiboot", d)} \
     \
     enigma2-plugin-extensions-weatherplugin enigma2-plugin-systemplugins-weathercomponenthandler enigma2-plugin-skincomponents-weathercomponent \
     \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-themes", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "enigma2-plugin-extensions-openwebif-webtv", "enigma2-plugin-extensions-openwebif-vxg", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "omb", "enigma2-plugin-extensions-openmultiboot", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "omb", "openmultiboot", "", d)} \    
     \
     enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-egamipluginspeedup \

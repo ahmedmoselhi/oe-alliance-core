@@ -10,7 +10,7 @@ PR = "r3"
 
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://github.com/a4tech/egami-base-files.git"
+SRC_URI = "git://github.com/ahmedmoselhi/egami-base-files.git"
 
 FILES_${PN} = "/bin /etc /scripts /media /usr /mipsel /arm"
 
