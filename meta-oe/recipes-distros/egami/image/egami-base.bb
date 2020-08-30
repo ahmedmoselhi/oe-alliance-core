@@ -27,16 +27,10 @@ RDEPENDS_${PN} = "\
         libcrypto-compat-0.9.7 \
         mc \
         ntfs-3g \
-        openvpn \
         python-imaging \
         python-service-identity \
         python-wifi \
+	openssh-sftp-server \
+        openvpn \
         rtmpdump \
-"
-
-RRECOMMENDS_${PN} = "\
-	streamripper \
-	hdparm \
-	minidlna \
-	djmount \
 "
