@@ -45,9 +45,10 @@ RRECOMMENDS_${PN} = "\
 	\
 	python-twisted-web python-gdata python-textutils python-json python-google-api-client python-httplib2 python-youtube-dl-src python-ctypes python-six \
 	\
-        enigma2-plugin-extensions-openmultiboot \
-        openmultiboot \
-         \
+	streamripper \
+	hdparm \
+	minidlna \
+	djmount \
 	${@bb.utils.contains("MACHINE_FEATURES", "skins1080", "hd-skins-meta", "", d)} \
 	\
 "
