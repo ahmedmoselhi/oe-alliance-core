@@ -15,6 +15,13 @@ DEPENDS = "openspa-feeds"
 RRECOMMENDS_${PN} = " \
     enigma2-skindefault \
     openspa-version-info \
+    enigma2-plugin-systemplugins-wirelesslan \
+    enigma2-plugin-systemplugins-networkbrowser \
+    enigma2-plugin-systemplugins-networkwizard \
+    enigma2-plugin-systemplugins-hotplug \
+    enigma2-plugin-extensions-openwebif \
+    enigma2-plugin-systemplugins-satfinder \
+    \
     ${@bb.utils.contains_any("FLASHSIZE", "64 96", " \
     enigma2-plugin-extensions-openwebif-webtv \
     ", " \
@@ -24,7 +31,6 @@ RRECOMMENDS_${PN} = " \
     enigma2-plugin-extensions-openwebif-vxg \
     ", d)} \
     \
-    enigma2-plugin-extensions-spateam \
     enigma2-plugin-systemplugins-videotune \
     ${@bb.utils.contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
     enigma2-plugin-systemplugins-softwaremanager \
@@ -40,13 +46,28 @@ RRECOMMENDS_${PN} = " \
     ${@bb.utils.contains("MACHINE_FEATURES", "grautec", "enigma2-plugin-extensions-grautec", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "chromiumos", "enigma2-plugin-extensions-chromium", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "dvbc-only", "", "enigma2-plugin-extensions-programmlistenupdater", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "dvd", "bdremux replex mjpegtools dvdauthor dvd+rw-tools cdrkit cdfs cdtextinfo enigma2-plugin-extensions-cdinfo enigma2-plugin-extensions-dvdburn enigma2-plugin-extensions-dvdplayer ${GST_BASE_DVD}", "", d)} \
+    \
+    enigma2-plugin-extensions-spateam \
+    enigma2-plugin-extensions-mytube \
+    enigma2-plugin-extensions-openspa_jr \
+    enigma2-plugin-extensions-spazemenu \
+    enigma2-plugin-extensions-spazeimdb \
+    enigma2-plugin-extensions-spazemosaic \
+    enigma2-plugin-extensions-spazeremotechannels \
+    enigma2-plugin-extensions-spztimeshift \
+    enigma2-plugin-extensions-spzwheather \
+    enigma2-plugin-extensions-spzzaphistory \
+    enigma2-plugin-systemplugins-spzaddiptv \
+    enigma2-plugin-systemplugins-swapmanager \
+    enigma2-plugin-systemplugins-infosignal \
+    \
+    tuxbox-links \
+    tuxbox-common \
+    mtd-utils \
+    aio-grab \
+    procps \
+    parted \    
     "
-
-GST_BASE_DVD = "\
-    gstreamer1.0-plugins-bad-videoparsersbad \
-    gstreamer1.0-plugins-bad-mpegtsmux \
-"
 
 RRECOMMENDS_${PN}_append_wetekplay = " enigma2-plugin-systemplugins-wirelesslan"
 RRECOMMENDS_${PN}_append_wetekplay2 = " enigma2-plugin-systemplugins-wirelesslan"

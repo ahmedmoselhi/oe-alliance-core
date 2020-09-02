@@ -19,14 +19,21 @@ IMAGE_INSTALL = "openspa-base \
     packagegroup-base-smbfs-server \
     packagegroup-base-nfs \
     ", d)} \
+    enigma2-locale-en \
+    enigma2-locale-ar \
+    enigma2-locale-ru \
+    autofs \
+    unjffs2 \
+    wireless-tools \
+    rt3070 \
+    mt7601u \
+    rt8188eu \
+    rtl8192cu \
+    early-configure \
+    kernel-params \
     "
 
 export IMAGE_BASENAME = "openspa-image"
-# 64 or 128MB of flash: No language files, above: Spanish and French
-IMAGE_LINGUAS  = "${@bb.utils.contains_any("FLASHSIZE", "64 96 128", "", "es-es fr-fr", d)}"
-
-# Add more languages for 512 or more MB of flash:
-IMAGE_LINGUAS += "${@bb.utils.contains_any("FLASHSIZE", "64 96 128 256", "", "de-de it-it nl-nl pt-pt", d)}"
 
 IMAGE_FEATURES += "package-management"
 

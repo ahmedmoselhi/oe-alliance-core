@@ -24,7 +24,6 @@ RRECOMMENDS_${PN} = "\
     openssl-old \
     enigma2-plugin-extensions-cooltvguide \
     enigma2-plugin-extensions-bmediacenter \
-    enigma2-plugin-extensions-enhancedmoviecenter \
     enigma2-plugin-extensions-blurayplayer \
     enigma2-plugin-extensions-subssupport \
     enigma2-plugin-systemplugins-autobouquetsmaker \
