@@ -13,7 +13,7 @@ BB_HASH_IGNORE_MISMATCH = "1"
 DEFAULT_TIMEZONE = "Europe/Madrid"
 
 # default Enigma2 skin.
-E2DEFAULTSKIN = "enigma2-skindefault"
+E2DEFAULTSKIN = "enigma2-skindefault-master"
 
 ENIGMA2_URI ?= "git://github.com/ahmedmoselhi/dvbapp2;protocol=https;branch=master"
 ENIGMA2_SKINS_URI ?= "git://github.com/OpenViX/enigma2-skins;protocol=https"

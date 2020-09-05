@@ -12,7 +12,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " \
+RDEPENDS_${PN} = " openspa-base-files \
     ca-certificates \
     flip \
     hddtemp \
@@ -23,6 +23,7 @@ RDEPENDS_${PN} = " \
     packagegroup-base-smbfs-client \
     python-imaging \
     python-service-identity \
+    python-runpy python-gdata python-google-api-client python-httplib2 python-uritemplate python-youtube-dl python-oauth2client \
     rtmpdump \
     ${@bb.utils.contains("TUNE_FEATURES", "armv", "glibc-compat", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "dreamboxv1", "", "ofgwrite", d)} \

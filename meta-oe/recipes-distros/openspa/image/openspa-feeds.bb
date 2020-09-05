@@ -22,6 +22,7 @@ RRECOMMENDS_${PN} = "\
     curlftpfs \
     cdfs \
     openssl-old \
+    enigma2-plugin-systemplugins-serviceapp \
     enigma2-plugin-extensions-cooltvguide \
     enigma2-plugin-extensions-bmediacenter \
     enigma2-plugin-extensions-blurayplayer \

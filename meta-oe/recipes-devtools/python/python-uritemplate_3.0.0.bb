@@ -13,6 +13,6 @@ S = "${WORKDIR}/uritemplate-${PV}"
 SRC_URI[md5sum] = "1ec31e0d8a2eec72357b2cef4bce5945"
 SRC_URI[sha256sum] = "c02643cebe23fc8adb5e6becffe201185bf06c40bda5c0b4028a93f1527d011d"
 
-inherit distutils
+inherit distutils setuptools
 
 include python-package-split.inc
