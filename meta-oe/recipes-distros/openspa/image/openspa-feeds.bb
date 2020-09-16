@@ -21,7 +21,9 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-extensions-filecommander \
     curlftpfs \
     cdfs \
+    inadyn-mt udpxy djmount mediatomb transmission minidlna sabnzbd ushare \
     openssl-old \
+    python-beautifulsoup python-requests \
     enigma2-plugin-systemplugins-serviceapp \
     enigma2-plugin-extensions-cooltvguide \
     enigma2-plugin-extensions-bmediacenter \
@@ -29,6 +31,9 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-extensions-subssupport \
     enigma2-plugin-systemplugins-autobouquetsmaker \
     ${@bb.utils.contains("MACHINE_BRAND", "AZBOX", "enigma2-plugin-extensions-azplay enigma2-plugin-extensions-aziptv", "", d)} \
+    \
+    enigma2-plugin-softcams-oscam-emu-spa \
+    enigma2-plugin-softcams-ncam-spa \
     "
 
 RRECOMMENDS_${PN}_append_gb800solo = "enigma2-plugin-extensions-gbipboxclient"

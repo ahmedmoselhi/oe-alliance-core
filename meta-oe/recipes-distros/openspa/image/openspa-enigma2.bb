@@ -17,12 +17,12 @@ RDEPENDS_${PN} = " \
     openspa-version-info \
     enigma2-plugin-systemplugins-wirelesslan \
     enigma2-plugin-systemplugins-networkwizard \
+    enigma2-plugin-systemplugins-hdmicec \
     enigma2-plugin-systemplugins-hotplug \
     enigma2-plugin-systemplugins-devicemanager \
     enigma2-plugin-extensions-openwebif \
     enigma2-plugin-extensions-cooltvguide \
     enigma2-plugin-extensions-pictureplayer \
-    enigma2-plugin-systemplugins-satfinder \
     \
     ${@bb.utils.contains_any("FLASHSIZE", "64 96", " \
     enigma2-plugin-extensions-openwebif-webtv \
